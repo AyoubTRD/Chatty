@@ -1,0 +1,55 @@
+form .form-control:focus {
+  outline: none;
+}
+* {
+  list-style: none !important;
+  font-family: "Roboto", sans-serif;
+}
+form .button {
+  border: 1px solid #64e408;
+  border-radius: 0;
+  color: #64e408;
+  transition: 0.5s;
+  background-color: white;
+}
+form .form-control {
+  border: none;
+  background-color: #f1f2f2;
+  border-radius: 0;
+}
+form .button:hover {
+  background-image: linear-gradient(to left, #64e408, #04ce9b);
+  color: white;
+}
+.center {
+  background: #e6e7e8;
+  width: 40%;
+  min-width: 340px;
+  margin: 10% auto;
+  border-top: 10px solid #939598;
+}
+li {
+  border-radius: 40px;
+  border-top-left-radius: 0;
+  background: white;
+  color: black;
+  max-width: 80%;
+}
+li .author {
+  font-style: italic;
+  opacity: 0.6;
+}
+.own-message {
+  border-radius: 40px;
+  border-top-right-radius: 0 !important;
+  background: #c9ffbf;
+  color: black;
+  max-width: 80%;
+  margin-left: auto;
+}
+form {
+  margin: 0;
+}
+li * {
+  max-width: 99%;
+}

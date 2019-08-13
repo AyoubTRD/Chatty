@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chatty</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="center shadow-lg">
+
+      <form class="name">
+        <p class="text-danger text-center error py-1">Please enter your name first</p>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Your name" name="name" required>
+
+          <div class="input-group-append">
+            <button class="btn button">Submit</button>
+          </div>
+        </div>
+
+      </form>
+
+      <ul class="my-3 px-3 py-1">
+
+
+      </ul>
+
+      <form class="message">
+
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Your message" name="text" required>
+
+          <div class="input-group-append">
+            <button class="btn button">Send</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCs3rU-PKxkmTytcLO6DhpbJlW9c6HC6fg",
+      authDomain: "chatty-845af.firebaseapp.com",
+      databaseURL: "https://chatty-845af.firebaseio.com",
+      projectId: "chatty-845af",
+      storageBucket: "chatty-845af.appspot.com",
+      messagingSenderId: "713406477749",
+      appId: "1:713406477749:web:74df32429a4a9fc6"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore()
+
+  </script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
