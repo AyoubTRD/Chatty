@@ -17,7 +17,6 @@ else {
   });
 }
 
-setTimeout(() => Notification.requestPermission(), 7000);
 
 const showMessages = (message, id) => {
   let ownerClass = "";
@@ -26,9 +25,6 @@ const showMessages = (message, id) => {
     ownerClass = "own-message";
     owner = "Me";
   }
-  const messageNotification = new Notification(
-    message.author + " sent a message!"
-  );
 
   let html = `
   <li class="px-4 my-2 ${ownerClass}" data-id="${id}">
