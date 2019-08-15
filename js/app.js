@@ -23,11 +23,14 @@ const showMessages = (message, id) => {
     ownerClass = "own-message";
     owner = "Me";
   }
-
+  let when = dateFns.distanceInWordsToNow(message.time.toDate(), {
+    addSuffix: true
+  });
   let html = `
   <li class="px-4 my-2 ${ownerClass}" data-id="${id}">
     <span class="author pt-2 d-block">${owner}</span>
-    <p class="text pb-2">${message.text}</p>
+    <p class="text mb-0">${message.text}</p>
+    <div class="pb-2 time">${when}</div>
   </li>
   `;
   $("ul").innerHTML += html;
