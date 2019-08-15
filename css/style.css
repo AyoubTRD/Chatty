@@ -6,9 +6,9 @@ form .form-control:focus {
   font-family: "Roboto", sans-serif;
 }
 form .button {
-  border: 1px solid #c9ffbf;
+  border: 1px solid #1771f1;
   border-radius: 0;
-  color: black;
+  color: #1771f1;
   transition: 0.5s;
   background-color: white;
 }
@@ -18,7 +18,8 @@ form .form-control {
   border-radius: 0;
 }
 form .button:hover {
-  background-color: #c9ffbf;
+  background-color: #1771f1;
+  color: white;
 }
 .center {
   background: #e6e7e8;
@@ -41,8 +42,8 @@ li .author {
 .own-message {
   border-radius: 40px;
   border-top-right-radius: 0 !important;
-  background: #c9ffbf;
-  color: black;
+  background: #1771f1;
+  color: white;
   max-width: 80%;
   margin-left: auto;
 }
