@@ -1,11 +1,8 @@
-
 const $ = element => document.querySelector(element);
 const $$ = element => document.querySelectorAll(element);
 $$("form").forEach(form => {
   form.addEventListener("submit", e => e.preventDefault());
 });
-let hello;
-let hello1;
 let name = localStorage.getItem("name");
 
 if (name) $(".name").remove();
@@ -37,25 +34,24 @@ const showMessages = (message, id) => {
 };
 
 const sendMessage = text => {
-  const time = new Date();
+  const now = new Date();
   const message = {
-    time: time.getTime(),
+    time: firebase.firestore.Timestamp.fromDate(now),
     author: name,
     text: text
   };
   db.collection("messages").add(message);
 };
 
-db.collection("messages").onSnapshot(snapshot => {
-  hello = snapshot;
-  snapshot.docChanges().sort((a, b) => a.doc.data().time - b.doc.data().time);
-  hello1 = snapshot;
-  snapshot.docChanges().forEach(change => {
-    if (change.type == "added") {
-      showMessages(change.doc.data(), change.doc.id);
-    }
+db.collection("messages")
+  .orderBy("time")
+  .onSnapshot(snapshot => {
+    snapshot.docChanges().forEach(change => {
+      if (change.type == "added") {
+        showMessages(change.doc.data(), change.doc.id);
+      }
+    });
   });
-});
 
 $(".message").addEventListener("submit", () => {
   if ($(".message").text.value && name) {
