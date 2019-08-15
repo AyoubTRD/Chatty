@@ -53,3 +53,6 @@ form {
 li * {
   max-width: 99%;
 }
+.time {
+  opacity: 0.3;
+}
