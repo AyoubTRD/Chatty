@@ -36,9 +36,9 @@ const showMessages = (message, id) => {
 const sendMessage = text => {
   const now = new Date();
   const message = {
-    time: firebase.firestore.Timestamp.fromDate(now),
     author: name,
-    text: text
+    text: text,
+    time: firebase.firestore.Timestamp.fromDate(now)
   };
   db.collection("messages").add(message);
 };
