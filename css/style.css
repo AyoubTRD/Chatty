@@ -8,7 +8,7 @@ form .form-control:focus {
 form .button {
   border: 1px solid #c9ffbf;
   border-radius: 0;
-  color: #c9ffbf;
+  color: black;
   transition: 0.5s;
   background-color: white;
 }
@@ -19,7 +19,6 @@ form .form-control {
 }
 form .button:hover {
   background-color: #c9ffbf;
-  color: white;
 }
 .center {
   background: #e6e7e8;
