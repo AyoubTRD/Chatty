@@ -6,9 +6,9 @@ form .form-control:focus {
   font-family: "Roboto", sans-serif;
 }
 form .button {
-  border: 1px solid #64e408;
+  border: 1px solid #c9ffbf;
   border-radius: 0;
-  color: #64e408;
+  color: #c9ffbf;
   transition: 0.5s;
   background-color: white;
 }
@@ -18,7 +18,7 @@ form .form-control {
   border-radius: 0;
 }
 form .button:hover {
-  background-image: linear-gradient(to left, #64e408, #04ce9b);
+  background-color: #c9ffbf;
   color: white;
 }
 .center {
