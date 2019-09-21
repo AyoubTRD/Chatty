@@ -56,3 +56,7 @@ li * {
 .time {
   opacity: 0.3;
 }
+ul {
+  height: 400px;
+  overflow-y: scroll;
+}
